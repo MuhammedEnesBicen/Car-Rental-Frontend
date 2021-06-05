@@ -1,0 +1,59 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Rent A Car</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div  class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul *ngIf="isAdmin" class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="/carsadmin" href="#">Cars</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="/rentals" href="#"
+              >Rentals</a
+            >
+  
+          </li>
+        </ul>
+        <ul *ngIf="isUser" class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="/userrentals" href="#"
+              >Cart</a
+            >
+  
+          </li>
+        </ul>
+        <ul *ngIf="isAuthenticated()==false" class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+        
+        <div class="d-flex" *ngIf="isAuthenticated()==false">
+          <button type="button" class="btn btn-secondary"routerLink="/register">Register</button>
+  
+          <button type="button" class="btn btn-secondary"routerLink="/login" style="margin-left: 10px;">Login</button>
+        </div>
+  
+        <div class="d-flex" *ngIf="isAuthenticated()==true">
+          
+          <div class="dropdown me-1" >
+            <button type="button" class="btn btn-secondary dropdown-toggle" id="dropdownMenuOffset" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="10,20">
+              {{userName}}
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+               <li><a class="dropdown-item" (click)="logOut()">Log Out</a></li>
+              <li><a class="dropdown-item" routerLink="/updateinfo"href="#">Update Information</a></li>
+            </ul>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </nav>
+  

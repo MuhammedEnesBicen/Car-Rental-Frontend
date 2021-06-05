@@ -1,0 +1,88 @@
+<div class="row">
+    <select class="form-control"
+         >
+            <option  *ngFor="let brand of brands" [value]="brand.brandId">{{brand.brandName}}</option>
+        </select>
+
+        <div *ngIf="openBrandAddMenu">
+            <h5 style="margin-top: 10px;">Add New Brand</h5>
+            <form [formGroup]="brandAddForm" (ngSubmit)="brandAdd()" >
+                <div class="form-group">
+                    <input type="text" id="brandName" name="brandName" formControlName="brandName" class="form-control" placeholder="new brand name..">
+                    <div class="alert alert-danger" *ngIf="brandAddForm.get('brandName').hasError('required') &&brandAddForm.get('brandName').dirty">brand name is required</div>
+                </div>
+                <button type="submit" class="btn btn-primary" [disabled]="brandAddForm.invalid">Add Brand</button>
+            </form>
+
+        </div>
+
+        <div *ngIf="openBrandUpdateMenu">
+            <h5 style="margin-top: 10px;">Update the Brand</h5>
+            <form [formGroup]="brandUpdateForm" (ngSubmit)="brandUpdate()" >
+                <div class="form-group">
+                    <select class="form-control"
+                    formControlName="brandId" required id="brandId" name="brandId">
+                        <option  *ngFor="let brand of brands" [value]="brand.brandId">{{brand.brandName}}</option>
+                    </select>
+                    <div *ngIf="brandUpdateForm.get('brandId').hasError('required') &&brandUpdateForm.get('brandId').touched" class="alert alert-danger">brand is required</div>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="brandName" name="brandName" formControlName="brandName" class="form-control" placeholder="new brand name..">
+                    <div class="alert alert-danger" *ngIf="brandUpdateForm.get('brandName').hasError('required') &&brandUpdateForm.get('brandName').dirty">brand name is required</div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary" [disabled]="brandUpdateForm.invalid">Update brand</button>
+            </form>
+
+        </div>
+        <div class="column">
+            <button class="btn btn-success col-md-6" (click)="openBrandAddMenuFunc()">Add</button>
+            <button class="btn btn-warning col-md-6" (click)="openBrandUpdateMenuFunc()">Update</button>
+        </div>
+
+
+        <!-- this is color division-->
+        <select class="form-control"
+        >
+           <option  *ngFor="let color of colors" [value]="color.colorId">{{color.colorName}}</option>
+       </select>
+
+       <div *ngIf="openColorAddMenu">
+           <h5 style="margin-top: 10px;">Add New Color</h5>
+           <form [formGroup]="colorAddForm" (ngSubmit)="colorAdd()" >
+               <div class="form-group">
+                   <input type="text" id="colorName" name="colorName" formControlName="colorName" class="form-control" placeholder="new color name..">
+                   <div class="alert alert-danger" *ngIf="colorAddForm.get('colorName').hasError('required') &&colorAddForm.get('colorName').dirty">color name is required</div>
+               </div>
+               <button type="submit" class="btn btn-primary" [disabled]="colorAddForm.invalid">Add Color</button>
+           </form>
+
+       </div>
+
+       <div *ngIf="openColorUpdateMenu">
+           <h5 style="margin-top: 10px;">Update the Color</h5>
+           <form [formGroup]="colorUpdateForm" (ngSubmit)="colorUpdate()" >
+               <div class="form-group">
+                   <select class="form-control"
+                   formControlName="colorId" required id="colorId" name="colorId">
+                       <option  *ngFor="let color of colors" [value]="color.colorId">{{color.colorName}}</option>
+                   </select>
+                   <div *ngIf="colorUpdateForm.get('colorId').hasError('required') &&colorUpdateForm.get('colorId').touched" class="alert alert-danger">color is required</div>
+               </div>
+               <div class="form-group">
+                   <input type="text" id="colorName" name="colorName" formControlName="colorName" class="form-control" placeholder="new color name..">
+                   <div class="alert alert-danger" *ngIf="colorUpdateForm.get('colorName').hasError('required') &&colorUpdateForm.get('colorName').dirty">color name is required</div>
+               </div>
+               
+               <button type="submit" class="btn btn-primary" [disabled]="colorUpdateForm.invalid">Update color</button>
+           </form>
+
+       </div>
+       <div class="column">
+           <button class="btn btn-success col-md-6" (click)="openColorAddMenuFunc()">Add</button>
+           <button class="btn btn-warning col-md-6" (click)="openColorUpdateMenuFunc()">Update</button>
+       </div>
+        
+
+        
+</div>
