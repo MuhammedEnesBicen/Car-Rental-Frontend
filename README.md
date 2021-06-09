@@ -3,8 +3,8 @@
 ## Setup
 
 - Download this project and open it in Vs Code,
-- Make sure node is installed on your computer,
-- Make sure you have node cli installed on your computer,
+- Make sure node is installed on your computer (for downloading node: https://nodejs.org/en/download/),
+- Make sure you have angular cli installed on your computer (write in vs code terminal: npm install -g @angular/cli ),
 - Open terminal in vs code and run "npm install" code,
 - again run "ng serve --open" in terminal, project should be running now. Of course, if you have also run the backend part.
 (backend: https://github.com/MuhammedEnesBicen/Car-Rental-Backend)
