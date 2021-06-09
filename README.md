@@ -1,27 +1,33 @@
 # CarRentalFrontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.9.
+## Setup
 
-## Development server
+- Download this project and open it in Vs Code,
+- Make sure node is installed on your computer,
+- Make sure you have node cli installed on your computer,
+- Open terminal in vs code and run "npm install" code,
+- again run "ng serve --open" in terminal, project should be running now. Of course, if you have also run the backend part.
+(backend: https://github.com/MuhammedEnesBicen/Car-Rental-Backend)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Project Images
 
-## Code scaffolding
+### Login Screen
+![](https://github.com/MuhammedEnesBicen/Car-Rental-Backend/blob/master/images/1.png)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Register Screeen
+![](https://github.com/MuhammedEnesBicen/Car-Rental-Backend/blob/master/images/2.png)
 
-## Build
+### Home Screen
+![](https://github.com/MuhammedEnesBicen/Car-Rental-Backend/blob/master/images/3.png)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+![](https://github.com/MuhammedEnesBicen/Car-Rental-Backend/blob/master/images/4.png)
 
-## Running unit tests
+### Rent Screen
+![](https://github.com/MuhammedEnesBicen/Car-Rental-Backend/blob/master/images/5.png)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Cart Screen
+![](https://github.com/MuhammedEnesBicen/Car-Rental-Backend/blob/master/images/6.png)
 
-## Running end-to-end tests
+### Admin Screen
+![](https://github.com/MuhammedEnesBicen/Car-Rental-Backend/blob/master/images/7.png)
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
