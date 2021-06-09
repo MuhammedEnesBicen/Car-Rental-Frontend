@@ -9,9 +9,17 @@
 - again run "ng serve --open" in terminal, project should be running now. Of course, if you have also run the backend part.
 (backend: https://github.com/MuhammedEnesBicen/Car-Rental-Backend)
 
+admin;
+email: admin
+password: 1234
+
+user;
+email: user
+password: 1234
+
 ## Project Images
 
-### Login Screen
+### Login Screen <br /><br />
 ![](https://github.com/MuhammedEnesBicen/Car-Rental-Backend/blob/master/images/1.png)
 
 ### Register Screeen
